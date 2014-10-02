@@ -1,0 +1,35 @@
+#include<stdio.h>
+void inhoa(char a[])//chuong trinh chuyen doi chu viet thuong thanh chu in hoa
+{
+	int ma,i=0;//ma: ma ascii cua a[i]
+	while(a[i]!=NULL)
+	{
+		ma=(int)a[i];
+		if((ma>96)&&(ma<123)) a[i]=(char)(ma-32);
+		i++;
+	}
+}
+main()
+{
+	char ten[50],hk[100];//hk:ho khau
+	int ns,k,nn;//ns:nam sinh		k:khoa
+	long mssv;//ma so sinh vien
+	printf("chuong trinh in ra thong tin sinh vien tu du lieu nhap vao:\nnhap vao ma so sinh vien:");
+	scanf("%d",&mssv);
+	printf("nhap vao ten:");
+	fflush(stdin);
+	gets(ten);
+	printf("nhap vao nam sinh:");
+	scanf("%d",&ns);
+	printf("nhap vao ho khau(khong qua 100 ki tu):");
+	fflush(stdin);
+	gets(hk);
+	printf("nhap vao nhom nganh:");
+	scanf("%d",&nn);
+	printf("nhap vao khoa:");
+	scanf("%d",&k);
+	system("cls");
+	inhoa(ten);
+	inhoa(hk);
+	printf("%cDAI HOC BACH KHOA HA NOI\nHO TEN: %s\nMSSV: %d\nNAM SINH: %d\nHO KHAU: %s\nNHOM NGANH: %d\nK: %d",9,ten,mssv,ns,hk,nn,k);
+}
