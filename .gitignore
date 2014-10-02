@@ -1,0 +1,21 @@
+#include <stdio.h>
+#include<math.h>
+float thetich(float a)//chuong trinh tinh the tich khoi cau
+{
+	return (a=4*M_PI*pow(a,3)/3);
+}
+
+main()
+{
+	float r,v;	//r: ban kinh v: the tich
+	printf("ban kinh hinh cau la: R=");
+	scanf("%f",&r);
+	while(r<0) // kiem tra xem ban kinh co duong khong
+	{
+		printf("ban kinh phai khong am!\nhay nhap lai: R=");
+		scanf("%f",&r);
+	}
+	v=4*M_PI*r*r*r/3;
+	printf("the tich cua khoi cau la:V=%.2f\n",v);
+	printf("the tich cua khoi cau la:V=%.2f",thetich(r));
+}
